@@ -7,6 +7,7 @@ import (
 	"os"
 	"strconv"
 	"strings"
+	"time"
 )
 
 type ScratchCard struct {
@@ -22,6 +23,7 @@ type ScratchCardNode struct {
 }
 
 func main() {
+	start := time.Now()
 	f, err := os.Open("input.txt")
 	if err != nil {
 		log.Fatalln(err)
@@ -63,6 +65,7 @@ func main() {
 	//}
 
 	log.Printf("result = %d\n", result)
+	fmt.Printf("Elapsed time : %s\n", time.Since(start))
 }
 
 func createCard(cardString string) *ScratchCard {
@@ -112,7 +115,7 @@ func processCardList(root *ScratchCardNode, cardTotal int) int {
 			break
 		}
 	}
-	fmt.Printf("id = %d cardWinnings = %d timesWon = %d cardTotal = %d\n", root.card.id, cardWinnings, root.timesWon, cardTotal)
+	//fmt.Printf("id = %d cardWinnings = %d timesWon = %d cardTotal = %d\n", root.card.id, cardWinnings, root.timesWon, cardTotal)
 	cardTotal += root.timesWon
 	if root.next != nil {
 		return processCardList(root.next, cardTotal)
