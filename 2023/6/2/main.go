@@ -32,13 +32,16 @@ func parseRaces(timeString string, distanceString string) []*Race {
 	distanceSplit := strings.Split(distanceString, ":")
 	distances := strings.Fields(distanceSplit[1])
 
-	var races []*Race
-	for i, time := range times {
-		t, _ := strconv.Atoi(time)
-		d, _ := strconv.Atoi(distances[i])
+	t, _ := strconv.Atoi(strings.Join(times, ""))
+	d, _ := strconv.Atoi(strings.Join(distances, ""))
 
-		races = append(races, &Race{t, d})
+	races := []*Race{
+		&Race{
+			time:     t,
+			distance: d,
+		},
 	}
+
 	return races
 }
 

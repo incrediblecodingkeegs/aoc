@@ -1,10 +1,9 @@
 # 2023
 
+[Reddit Solution thread](https://www.reddit.com/r/adventofcode/search?q=flair_name%3A%22SOLUTION%20MEGATHREAD%22&restrict_sr=1)
+
 ## Day 1
 
-[Reddit thread](https://www.reddit.com/r/adventofcode/comments/1883ibu/2023_day_1_solutions/?sort=confidence)
-
-After Thoughts:
 - I used regexes even though I knew it would be dirty (spoiler: it was)
 - Found issues with regexes that they are mostly linear in nature and created issues with how to parse the string, 
 primarily that if a number word trailed off of another one, it had real trouble with this (e.g. oneight)
@@ -13,14 +12,29 @@ primarily that if a number word trailed off of another one, it had real trouble 
 
 ## Day 2
 
-After Thoughts:
 - I used my learnings from Day 1, and made a much neater solution using string replaces
 - Was able to very quickly retrofit the program for the Part 2 solution
 
 
 ## Day 3
 
-After thoughts:
 - Got stuck on this one for aaaages.
 - All my unit tests were passing, passed the visual inspection test.  Was the way I was processing results that was the 
 problem in the end
+
+## Day 4
+
+- Completed this day using a singly linked list.  My first time using this data structure, but I think it handled the
+task well.
+- Interestingly, I saw that other solutions used lists to store only the sum of all cards matched, which is probably 
+a simpler solution given the part 2 request.  If part 2 had have been more complex though, this might have run into
+space complexity issues
+
+## Day 5
+
+- Needed to improve the space complexity of my program to allow it to execute the second part
+- Used a state machine to move through the different transitions, although my solution was dependent on the input file
+being 100% correct
+- Solutions used go routines to improve the execution time, I should look at doing this as well
+
+## Day 6
