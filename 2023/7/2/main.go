@@ -50,10 +50,10 @@ func (h *Hand) getHandStrength() int {
 		}
 	}
 
-	fmt.Printf("cardCount before J: %d\n", highCardCount)
+	//fmt.Printf("cardCount before J: %d\n", highCardCount)
 
 	highCardCount += cardCount['J']
-	fmt.Printf("cardCount after J: %d\n", highCardCount)
+	//fmt.Printf("cardCount after J: %d\n", highCardCount)
 
 	// Based on highCardCount, determine rank
 	switch highCardCount {
@@ -107,7 +107,7 @@ func compareHandHighCard(h1 *Hand, h2 *Hand) bool {
 }
 
 func part1(handStrings []string) int {
-	// parse cards and append to correct strength
+	// parse cards and append to correct strength categories
 	var handStrengths [7][]*Hand
 	for _, handString := range handStrings {
 		hand := NewHand(handString)
@@ -116,7 +116,7 @@ func part1(handStrings []string) int {
 	}
 
 	//for i, strength := range handStrengths {
-	//	fmt.Printf("handStrengths[%d] = %s\n", i, strength)
+	////	fmt.Printf("handStrengths[%d] = %s\n", i, strength)
 	//}
 
 	// sort each strength category, and get total rank
@@ -129,14 +129,14 @@ func part1(handStrings []string) int {
 	}
 
 	//for i, strength := range handStrengths {
-	//	fmt.Printf("handStrengths[%d] = %s\n", i, strength)
+	////	fmt.Printf("handStrengths[%d] = %s\n", i, strength)
 	//}
 
 	// get winnings by iterating from bottom up through ranks
 	winnings := 0
 	for i := len(handStrengths) - 1; i >= 0; i-- {
 		for _, hand := range handStrengths[i] {
-			fmt.Printf("bid %d rank %d\n", hand.bid, rank)
+			//fmt.Printf("bid %d rank %d\n", hand.bid, rank)
 			winnings += hand.bid * rank
 			rank -= 1
 		}

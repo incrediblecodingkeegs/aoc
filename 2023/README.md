@@ -38,3 +38,9 @@ being 100% correct
 - Solutions used go routines to improve the execution time, I should look at doing this as well
 
 ## Day 6
+
+## Day 7
+
+- Went the wrong way to begin with
+- Approach I took in the end could have been simplified, but writing a custom sort function for each of the rank slices
+proved valuable when getting to part 2
