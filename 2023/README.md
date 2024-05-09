@@ -44,3 +44,13 @@ being 100% correct
 - Went the wrong way to begin with
 - Approach I took in the end could have been simplified, but writing a custom sort function for each of the rank slices
 proved valuable when getting to part 2
+
+## Day 8
+
+- My biggest issue with Day 8 was forgetting that lowest common multiple existed
+- Started with the most basic solution, a loop that ran through all nodes and their paths and cross checked whether
+they had a common step count in their traversal
+- Found that this approach was taking too long, and so wrote the program to be concurrent for each different starting node,
+although after running for 2 hours, figured even this was too slow
+- Then discovered that all paths were looping, and using a lowest common multiple for each of the paths, found the answer
+in < 1s of execution time
