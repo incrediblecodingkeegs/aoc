@@ -54,3 +54,7 @@ they had a common step count in their traversal
 although after running for 2 hours, figured even this was too slow
 - Then discovered that all paths were looping, and using a lowest common multiple for each of the paths, found the answer
 in < 1s of execution time
+
+## Day 9
+
+- Didnt have too much trouble with this one, my logic for the first part was easy to modify to work for the second part
