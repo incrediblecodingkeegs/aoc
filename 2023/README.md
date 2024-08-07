@@ -58,3 +58,6 @@ in < 1s of execution time
 ## Day 9
 
 - Didnt have too much trouble with this one, my logic for the first part was easy to modify to work for the second part
+
+## Day 10
+
